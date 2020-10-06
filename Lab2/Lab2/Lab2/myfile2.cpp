@@ -36,14 +36,19 @@ void replace(char* tab[], int const& nbre, int const& size)
 	}
 
 }
-void display(char* tab[], int const& nbre) {
+void display(char* tab[], int const& nbre)
+{
 	int num; //the string to display
 	cout << endl << "Enter the string number to display: ";
-	cin.ignore(INT_MAX, '\n');
 	cin >> num;
 	if (num >= 0 && num <= nbre) //check if the number is valid
 	{
-		cout << tab[num];
+		int a = 0;
+		while (tab[num - 1][a] != NULL) {
+			std::cout << (tab[num - 1][a]);
+			a++;
+		}
+
 	}
 	else
 	{
