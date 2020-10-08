@@ -7,23 +7,14 @@ void sort(int* myTab, int size) {
 			temp = *(myTab + (i + 1));
 			*(myTab + (i + 1)) = *(myTab + i);
 			for (int j = i; j >= 0; j--) {
-				if (j == 0) {
+				if ((j == 0) || (temp > *(myTab + (j - 1)))){
 					*(myTab + j) = temp;
 					break;
 				}
 				else {
-					if (temp < *(myTab + (j - 1))) {
-						*(myTab + j) = *(myTab + (j - 1));
-					}
-					else {
-						*(myTab + j) = temp;
-						break;
-					}
-					cout << "It is " << j << endl;
+					*(myTab + j) = *(myTab + (j - 1));
+					
 				}
-			}
-			if (i == size) {
-				cout << "It is i" << endl;
 			}
 		}
 	}

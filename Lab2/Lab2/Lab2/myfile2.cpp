@@ -13,7 +13,9 @@ char menu(void)
 	cout << "Your choice :";
 	cin >> choice;
 	return(choice);
-}/********************************************************************************/
+}
+
+/********************************************************************************/
 /*The replace function that replaces one string by another. It takes as arguments an array of pointers
 on the strings "tab", the number of elements of this array of pointers "nbre" and the maximum size of
 the strings "size" */
