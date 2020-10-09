@@ -10,3 +10,4 @@ void display(char* tab[], int const& nbre); //displays strings
 char menu(void); //displays a menu and return the choice
 void replace(char* tab[], int const& nbre, int const& size); //replace one string by an other
 void sort(char* tab[], int const& nbre); //insert sort
+#define _myFile2principal_	//Uncomment and Comment defines in other header files to run

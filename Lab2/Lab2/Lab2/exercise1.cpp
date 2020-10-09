@@ -6,6 +6,8 @@ using namespace std;
 //Modify the following program, just by inserting the display operator, in such a way that it
 //displays the following values::
 
+#ifdef _exercise1_
+
 void main(void)
 {
 	int tab[80];
@@ -29,3 +31,4 @@ void main(void)
 
 
 }
+#endif

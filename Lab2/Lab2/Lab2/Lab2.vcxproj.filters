@@ -18,12 +18,27 @@
     <ClInclude Include="myFile1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="exercise1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="myfile2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="myFiles1principal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="myFile1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exercise1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myFile2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myFile2principal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,4 +1,6 @@
 #include "myfile2.h"
+#pragma warning(disable : 4996)
+
 /********************************************************************************/
 /* Function menu which returns a character corresponding to the user's choice */
 /********************************************************************************/
@@ -40,20 +42,32 @@ void replace(char* tab[], int const& nbre, int const& size)
 }
 void display(char* tab[], int const& nbre)
 {
-	int num; //the string to display
-	cout << endl << "Enter the string number to display: ";
-	cin >> num;
-	if (num >= 0 && num <= nbre) //check if the number is valid
-	{
-		int a = 0;
-		while (tab[num - 1][a] != NULL) {
-			std::cout << (tab[num - 1][a]);
+	int a = 0;
+	for (int i = 0; i < nbre; i++) {
+		while (tab[i][a] != NULL) {
+			std::cout << (tab[i][a]);
 			a++;
 		}
-
+		cout << endl;
+		a = 0;
 	}
-	else
-	{
-		cout << "There is no string with this number" << endl;
+}
+
+void sort(char* tab[], int const& nbre) {
+	char temp[size_ch];
+	for (int i = 0; i < nbre - 1; i++) {
+		if (strcmp(*(tab + i), *(tab + (i + 1))) > 0) {
+			strcpy_s(temp, *(tab + (i + 1)));
+			strcpy(*(tab + (i + 1)), *(tab + i));
+			for (int j = i; j >= 0; j--) {
+				if ((j == 0) || (strcmp(temp, *(tab + (j - 1))) > 0)) {
+					strcpy(*(tab + j), temp);
+					break;
+				}
+				else {
+					strcpy(*(tab + j), *(tab + (j - 1)));
+				}
+			}
+		}
 	}
 }
